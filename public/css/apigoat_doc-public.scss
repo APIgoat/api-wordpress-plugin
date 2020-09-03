@@ -1,0 +1,45 @@
+
+.wedocs-single-wrap {
+    width: 100%;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.wedocs-single-wrap .wedocs-single-content {
+    width: 75%;
+    border-left: 1px solid #eee;
+    padding-left: 25px;
+}
+
+.wedocs-single-wrap:before, .wedocs-single-wrap:after {
+    content: " ";
+    display: table;
+}
+
+.wedocs-single-wrap .wedocs-sidebar {
+    width: 25%;
+}
+
+.wedocs-single-wrap .wedocs-sidebar ul.doc-nav-list {
+    list-style: none;
+    margin: 0 12px 0 0;
+	padding: 0;
+}
+
+.wedocs-single-wrap .wedocs-sidebar ul.doc-nav-list > li.current_page_parent > a, .wedocs-single-wrap .wedocs-sidebar ul.doc-nav-list > li.current_page_item > a, .wedocs-single-wrap .wedocs-sidebar ul.doc-nav-list > li.current_page_ancestor > a {
+    background: #3598DB;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.wedocs-single-wrap .wedocs-sidebar ul.doc-nav-list li a {
+    display: block;
+    padding: 8px 10px 8px 20px;
+    text-decoration: none;
+}
+
+.wedocs-single-wrap .wedocs-sidebar ul.doc-nav-list > li > a:before {
+	margin-right: 10px;
+	content:'';
+}
