@@ -12,6 +12,13 @@ It is based on DevinVinson/WordPress-Plugin-Boilerplate(https://github.com/Devin
 * classes/APIgoatFetchAPI.php contains the authentication and query
 * classes/APIgoatDoc.php is a formater
 
+## Installation
+
+1. Clone to the `/wp-content/plugins/` directory
+2. Change classes/APIgoatFetchAPI.php to fit your backend authentication
+3. Use the shortcode APIgoat_list
+
+
 License
 ----
 
