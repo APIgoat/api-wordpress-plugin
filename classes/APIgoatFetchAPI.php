@@ -9,10 +9,10 @@ include_once plugin_dir_path(dirname(__FILE__)) . 'includes/html_helper.php';
 class APIgoatFetchAPI
 {
 
-    private $username = 'wp-behavior@apigoat.com';
-    private $password = '0sKtegdSSk';
+    private $username = 'wp-behavior';
+    private $password = '0segdSSk';
     private $baseURI = 'https://goat.local/p/goatcheese/api/v1/';
-    private $jwt_pubkey = '9sKjdjuue8sSjwh6';
+    private $jwt_pubkey = '9sKjdjuue8sSjwh69dkehjash';
     private $jwt_alg = ['HS256'];
     private $client;
     private $credentials;
@@ -21,7 +21,7 @@ class APIgoatFetchAPI
     {
         $this->client = new APIClient($this->baseURI);
         $this->clientOptions = [
-            'verify' => false,
+            'verify' => true,
             'content-Type' => 'application/json',
             'accept' => 'application/json'
         ];
@@ -40,7 +40,7 @@ class APIgoatFetchAPI
     {
         $clientOptions = $this->clientOptions;
         $clientOptions['query'] = [
-            "Query" => [
+            "query" => [
                 "select" => [
                     ["behavior.name", "name"], ["code", "title"], ["description", "text"], "value", "example", "type", ["behavior_category.name", "category_name"]
                 ],
@@ -52,8 +52,7 @@ class APIgoatFetchAPI
                 ],
                 "join" => ["behavior_category"],
                 "limit" => 20
-            ],
-            "debug" => true
+            ]
         ];
 
 
