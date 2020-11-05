@@ -12,13 +12,16 @@ class APIgoatDoc extends APIgoatTemplate
 
         foreach ($data as $row) {
 
-            $menu .= li(href($row['name'], '#' . $row['title']), "class='page_item current_page_item'");
+            $menu .= li(href($row['name'], '#' . $row['title']), "class='page_item wd-state-closed'");
             $content .= div(
-                anchor($row['title']) . h3($row['name'])
+                anchor($row['title'])
                     . h2($row['title'], "class='entry-title'")
-                    . p($row['type'] . " " . $row['value'])
-                    . ((!empty($row['example'])) ? pre(htmlentities($row['example'])) : '')
+                    . h3($row['name'])
+                    . span($row['type'] . " " . $row['value'])
                     . p(trim($row['text']))
+                    . ((!empty($row['example'])) ? div(span("Example:") . pre(htmlentities($row['example']))) : ''),
+                "",
+                "class='doc-item'"
             );
         }
 
